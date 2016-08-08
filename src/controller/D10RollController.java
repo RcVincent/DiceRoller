@@ -1,11 +1,13 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
+
 import model.D10;
 
 public class D10RollController {
 
-		//public ArrayList<Integer> rolls = new ArrayList<Integer>();
+	public TreeMap<Integer, Integer> rolls = new TreeMap<Integer, Integer>(); 
 		
 		int onesCounter = 0;
 		int twosCounter = 0;
@@ -24,7 +26,9 @@ public class D10RollController {
 		public void roll(int n) {
 			for(int i = 0; i < n; i++) {
 				int k = dice.roll();
-				//rolls.add(k);
+				
+				//Populate the treemap
+				rolls.put(i, k);
 				
 				if(k == 1) {
 					onesCounter++;

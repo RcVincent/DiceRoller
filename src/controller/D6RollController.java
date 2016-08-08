@@ -3,11 +3,13 @@ package controller;
 import java.awt.List;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.TreeMap;
+
 import model.D6;
 
 public class D6RollController {
-	//Unused right now
-	//public ArrayList<Integer> rolls = new ArrayList<Integer>();
+	
+	public TreeMap<Integer, Integer> rolls = new TreeMap<Integer, Integer>(); 
 	
 	int onesCounter = 0;
 	int twosCounter = 0;
@@ -15,7 +17,7 @@ public class D6RollController {
 	int foursCounter = 0;
 	int fivesCounter = 0;
 	int sixesCounter = 0;
-	
+	int onesPercentage, twosPercentage, threesPercentage, foursPercentage, fivesPercentage, sixesPercentage = 0; 
 	D6 dice = new D6(); 
 	
 	
@@ -23,6 +25,8 @@ public class D6RollController {
 		for(int i = 0; i < n; i++) {
 			int k = dice.getRollValue();
 			
+			//Populate the treemap
+			rolls.put(i, k);
 			
 			if(k == 1) {
 				onesCounter++;
@@ -43,6 +47,15 @@ public class D6RollController {
 				sixesCounter++;
 			}
 		}
+		
+		onesPercentage = onesCounter/n;
+		twosPercentage = twosCounter/n;
+		threesPercentage = threesCounter/n;
+		foursPercentage = foursCounter/n; 
+		fivesPercentage = fivesCounter/n;
+		sixesPercentage = sixesCounter/n;
+		 
+		
 	}
 	
 	public void displayResults() {
@@ -52,5 +65,13 @@ public class D6RollController {
 		System.out.println("Fours rolled: " + foursCounter);
 		System.out.println("Fives rolled: " + fivesCounter);
 		System.out.println("Sixes rolled: " + sixesCounter);
+		
+		System.out.println("Percent of ones rolled: " + onesPercentage);
+		System.out.println("Percent of twos rolled: " + twosPercentage);
+		System.out.println("Percent of threes rolled: " + threesPercentage);
+		System.out.println("Percent of fours rolled: " + foursPercentage);
+		System.out.println("Percent of fives rolled: " + fivesPercentage);
+		System.out.println("Percent of sixes rolled: " + sixesPercentage);
+		
 	}
 }
