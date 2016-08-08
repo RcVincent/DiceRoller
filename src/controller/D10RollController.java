@@ -20,6 +20,7 @@ public class D10RollController {
 		int ninesCounter = 0;
 		int tensCounter = 0;
 		
+		int onesPercentage, twosPercentage, threesPercentage, foursPercentage, fivesPercentage, sixesPercentage, sevensPercentage, eightsPercentage, ninesPercentage, tensPercentage = 0; 
 		D10 dice = new D10(); 
 		
 		
@@ -62,6 +63,17 @@ public class D10RollController {
 				}
 				
 			}
+			
+			onesPercentage = onesCounter/n;
+			twosPercentage = twosCounter/n;
+			threesPercentage = threesCounter/n;
+			foursPercentage = foursCounter/n; 
+			fivesPercentage = fivesCounter/n;
+			sixesPercentage = sixesCounter/n;
+			sevensPercentage = sevensCounter/n;
+			eightsPercentage = eightsCounter/n;
+			ninesPercentage = ninesCounter/n;
+			tensPercentage = tensCounter/n;
 		}
 		
 		public void displayResults() {
@@ -75,6 +87,17 @@ public class D10RollController {
 			System.out.println("Eights rolled: " + eightsCounter);
 			System.out.println("Nines rolled: " + ninesCounter);
 			System.out.println("Tens rolled: " + tensCounter);
+			
+			System.out.println("Percent of ones rolled: " + onesPercentage);
+			System.out.println("Percent of twos rolled: " + twosPercentage);
+			System.out.println("Percent of threes rolled: " + threesPercentage);
+			System.out.println("Percent of fours rolled: " + foursPercentage);
+			System.out.println("Percent of fives rolled: " + fivesPercentage);
+			System.out.println("Percent of sixes rolled: " + sixesPercentage);
+			System.out.println("Percent of sevens rolled: " + sevensPercentage);
+			System.out.println("Percent of eights rolled: " + eightsPercentage);
+			System.out.println("Percent of nines rolled: " + ninesPercentage);
+			System.out.println("Percent of tens rolled: " + tensPercentage);
 		}
 	}
 
