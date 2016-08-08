@@ -2,11 +2,12 @@ package controller;
 
 import java.awt.List;
 import java.util.ArrayList;
-
+import java.util.Random;
 import model.D6;
 
 public class D6RollController {
-	public ArrayList<Integer> rolls = new ArrayList<Integer>();
+	//Unused right now
+	//public ArrayList<Integer> rolls = new ArrayList<Integer>();
 	
 	int onesCounter = 0;
 	int twosCounter = 0;
@@ -20,8 +21,8 @@ public class D6RollController {
 	
 	public void roll(int n) {
 		for(int i = 0; i < n; i++) {
-			int k = dice.roll();
-			rolls.add(k);
+			int k = dice.getRollValue();
+			
 			
 			if(k == 1) {
 				onesCounter++;

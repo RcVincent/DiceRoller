@@ -8,13 +8,22 @@ public class D6 {
 	private Random value; 
 	
 	public D6() {
+		value = new Random(); 
 	}
 	
 	
-	public int roll() {
-		int roll = value.nextInt(6); 
-		
-		return roll;
+	public Random getValue() {
+		return value;
+	}
+
+
+	public void setValue(Random value) {
+		this.value = value;
+	}
+	
+	public int getRollValue() {
+		int k = value.nextInt(6) + 1; 
+		return k;
 	}
 			
 }
