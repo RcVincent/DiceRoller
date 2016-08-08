@@ -18,18 +18,18 @@ public class Main {
 		D6RollController D6controller = new D6RollController();
 		D10RollController D10controller = new D10RollController();
 		
-		System.out.println("What dice system would you like to use?");
-		String dtype = keyboard.next();
+		System.out.println("What dice system would you like to use? Please enter the number of sides");
+		int systemType = keyboard.nextInt();
 		
 		System.out.println("How many rolls do you want to make?");
 		int rolls = keyboard.nextInt();
 		
-		if(dtype == "D6") {
+		if(systemType == 6) {
 			D6controller.roll(rolls);
 			D6controller.displayResults();
 		}
 		
-		if(dtype == "D10") {
+		if(systemType == 10) {
 			for(int i = 0; i < rolls; i++) {
 				D10controller.roll(rolls);
 				D10controller.displayResults();
