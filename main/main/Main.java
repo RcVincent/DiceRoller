@@ -30,10 +30,9 @@ public class Main {
 		}
 		
 		if(systemType == 10) {
-			for(int i = 0; i < rolls; i++) {
 				D10controller.roll(rolls);
 				D10controller.displayResults();
-			}
+			
 		}
 	
 	}

@@ -5,7 +5,7 @@ import model.D10;
 
 public class D10RollController {
 
-		public ArrayList<Integer> rolls = new ArrayList<Integer>();
+		//public ArrayList<Integer> rolls = new ArrayList<Integer>();
 		
 		int onesCounter = 0;
 		int twosCounter = 0;
@@ -24,7 +24,7 @@ public class D10RollController {
 		public void roll(int n) {
 			for(int i = 0; i < n; i++) {
 				int k = dice.roll();
-				rolls.add(k);
+				//rolls.add(k);
 				
 				if(k == 1) {
 					onesCounter++;
