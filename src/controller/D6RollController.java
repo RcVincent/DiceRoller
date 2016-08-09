@@ -1,8 +1,6 @@
 package controller;
 
-import java.awt.List;
-import java.util.ArrayList;
-import java.util.Random;
+
 import java.util.TreeMap;
 
 import model.D6;
@@ -17,7 +15,15 @@ public class D6RollController {
 	int foursCounter = 0;
 	int fivesCounter = 0;
 	int sixesCounter = 0;
-	int onesPercentage, twosPercentage, threesPercentage, foursPercentage, fivesPercentage, sixesPercentage = 0; 
+	
+	int onesPercentage = 0; 
+	int twosPercentage = 0;
+	int threesPercentage = 0; 
+	int foursPercentage = 0;
+	int fivesPercentage = 0;
+	int sixesPercentage = 0; 
+	 
+	
 	D6 dice = new D6(); 
 	
 	
@@ -58,6 +64,38 @@ public class D6RollController {
 		
 	}
 	
+	//rolling multiple dice several times, individually tallying values. 
+	public void massroll(int n, int m) {
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				int k = dice.getRollValue();
+				
+				//Populate the treemap
+				rolls.put(i, k);
+				
+				if(k == 1) {
+					onesCounter++;
+				}
+				else if (k == 2) {
+					twosCounter++;
+				}
+				else if (k == 3) {
+					threesCounter++;
+				}
+				else if (k == 4) {
+					foursCounter++;
+				}
+				else if (k == 5) {
+					fivesCounter++;
+				}
+				else if (k == 6) {
+					sixesCounter++;
+				}
+			}
+			
+		}
+	}
+	
 	public void displayResults() {
 		System.out.println("Ones rolled: " + onesCounter);
 		System.out.println("Twos rolled: " + twosCounter);
@@ -65,6 +103,8 @@ public class D6RollController {
 		System.out.println("Fours rolled: " + foursCounter);
 		System.out.println("Fives rolled: " + fivesCounter);
 		System.out.println("Sixes rolled: " + sixesCounter);
+		
+		System.out.println(); // for a line break in the console
 		
 		System.out.println("Percent of ones rolled: " + onesPercentage);
 		System.out.println("Percent of twos rolled: " + twosPercentage);
