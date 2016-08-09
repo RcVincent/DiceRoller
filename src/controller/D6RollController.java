@@ -15,14 +15,14 @@ public class D6RollController {
 	int foursCounter = 0;
 	int fivesCounter = 0;
 	int sixesCounter = 0;
-	
+	/*
 	int onesPercentage = 0; 
 	int twosPercentage = 0;
 	int threesPercentage = 0; 
 	int foursPercentage = 0;
 	int fivesPercentage = 0;
 	int sixesPercentage = 0; 
-	 
+	 */
 	
 	D6 dice = new D6(); 
 	
@@ -53,14 +53,14 @@ public class D6RollController {
 				sixesCounter++;
 			}
 		}
-		
+		/*
 		onesPercentage = onesCounter/n;
 		twosPercentage = twosCounter/n;
 		threesPercentage = threesCounter/n;
 		foursPercentage = foursCounter/n; 
 		fivesPercentage = fivesCounter/n;
 		sixesPercentage = sixesCounter/n;
-		 
+		 */
 		
 	}
 	
@@ -105,13 +105,13 @@ public class D6RollController {
 		System.out.println("Sixes rolled: " + sixesCounter);
 		
 		System.out.println(); // for a line break in the console
-		
+		/*
 		System.out.println("Percent of ones rolled: " + onesPercentage);
 		System.out.println("Percent of twos rolled: " + twosPercentage);
 		System.out.println("Percent of threes rolled: " + threesPercentage);
 		System.out.println("Percent of fours rolled: " + foursPercentage);
 		System.out.println("Percent of fives rolled: " + fivesPercentage);
 		System.out.println("Percent of sixes rolled: " + sixesPercentage);
-		
+		*/
 	}
 }

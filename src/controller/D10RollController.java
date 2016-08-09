@@ -20,7 +20,7 @@ public class D10RollController {
 		int ninesCounter = 0;
 		int tensCounter = 0;
 		
-		int onesPercentage, twosPercentage, threesPercentage, foursPercentage, fivesPercentage, sixesPercentage, sevensPercentage, eightsPercentage, ninesPercentage, tensPercentage = 0; 
+		//int onesPercentage, twosPercentage, threesPercentage, foursPercentage, fivesPercentage, sixesPercentage, sevensPercentage, eightsPercentage, ninesPercentage, tensPercentage = 0; 
 		D10 dice = new D10(); 
 		
 		
@@ -63,7 +63,7 @@ public class D10RollController {
 				}
 			
 			}
-			
+			/*
 			onesPercentage = onesCounter/n;
 			twosPercentage = twosCounter/n;
 			threesPercentage = threesCounter/n;
@@ -74,6 +74,7 @@ public class D10RollController {
 			eightsPercentage = eightsCounter/n;
 			ninesPercentage = ninesCounter/n;
 			tensPercentage = tensCounter/n;
+			*/
 		}
 		
 		public void massRoll(int n, int m) {
@@ -131,7 +132,7 @@ public class D10RollController {
 			System.out.println("Eights rolled: " + eightsCounter);
 			System.out.println("Nines rolled: " + ninesCounter);
 			System.out.println("Tens rolled: " + tensCounter);
-			
+			/*
 			System.out.println();//for a line break in the console
 			
 			System.out.println("Percent of ones rolled: " + onesPercentage);
@@ -144,6 +145,7 @@ public class D10RollController {
 			System.out.println("Percent of eights rolled: " + eightsPercentage);
 			System.out.println("Percent of nines rolled: " + ninesPercentage);
 			System.out.println("Percent of tens rolled: " + tensPercentage);
+			*/
 		}
 	}
 
