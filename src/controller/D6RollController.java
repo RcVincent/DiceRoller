@@ -64,37 +64,6 @@ public class D6RollController {
 		
 	}
 	
-	//rolling multiple dice several times, individually tallying values. 
-	public void massroll(int n, int m) {
-		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < m; j++) {
-				int k = dice.getRollValue();
-				
-				//Populate the treemap
-				rolls.put(i, k);
-				
-				if(k == 1) {
-					onesCounter++;
-				}
-				else if (k == 2) {
-					twosCounter++;
-				}
-				else if (k == 3) {
-					threesCounter++;
-				}
-				else if (k == 4) {
-					foursCounter++;
-				}
-				else if (k == 5) {
-					fivesCounter++;
-				}
-				else if (k == 6) {
-					sixesCounter++;
-				}
-			}
-			
-		}
-	}
 	
 	public void displayResults() {
 		System.out.println("Ones rolled: " + onesCounter);

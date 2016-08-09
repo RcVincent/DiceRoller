@@ -77,49 +77,7 @@ public class D10RollController {
 			*/
 		}
 		
-		public void massRoll(int n, int m) {
-			for(int i = 0; i < n; i++) {
-				for(int j = 0; j < m; j++) {
-
-					int k = dice.roll();
-
-					//Populate the treemap
-					rolls.put(i, k);
-
-					if(k == 1) {
-						onesCounter++;
-					}
-					else if (k == 2) {
-						twosCounter++;
-					}
-					else if (k == 3) {
-						threesCounter++;
-					}
-					else if (k == 4) {
-						foursCounter++;
-					}
-					else if (k == 5) {
-						fivesCounter++;
-					}
-					else if (k == 6) {
-						sixesCounter++;
-					}
-					else if (k == 7) {
-						sevensCounter++;
-					}
-					else if (k == 8) {
-						eightsCounter++;
-					}
-					else if (k == 9) {
-						ninesCounter++;
-					}
-					else if (k == 10) {
-						tensCounter++;
-					}
-				}
-			}
-
-		}
+		
 		
 		public void displayResults() {
 			System.out.println("Ones rolled: " + onesCounter);
