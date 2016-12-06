@@ -36,3 +36,5 @@ if _name_ == '_main_' :
 
     setLogLevel('info')
     runExperiment()
+    
+topos = { 'myfirsttopo': (lambda MyFirstTopo() )}
